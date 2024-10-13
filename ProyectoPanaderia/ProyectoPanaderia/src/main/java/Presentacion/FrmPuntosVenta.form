@@ -81,7 +81,7 @@
                       <Group type="102" alignment="1" attributes="0">
                           <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="TxtfProducto" min="-2" pref="185" max="-2" attributes="0"/>
+                          <Component id="jTextField1" min="-2" pref="185" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="BtnBuscarProducto" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="76" max="-2" attributes="0"/>
@@ -92,9 +92,9 @@
                   <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
                   <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="TxtfTienda" min="-2" pref="185" max="-2" attributes="0"/>
+                  <Component id="jTextField2" min="-2" pref="185" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="BtnBuscarTienda" min="-2" max="-2" attributes="0"/>
+                  <Component id="BtnBuscarProducto1" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="BtnMapaPuntosVenta1" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
@@ -110,16 +110,16 @@
                   <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="TxtfTienda" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+                      <Component id="jTextField2" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                       <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="BtnBuscarTienda" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="BtnBuscarProducto1" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="BtnMapaPuntosVenta1" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="jScrollPane2" min="-2" pref="138" max="-2" attributes="0"/>
                   <EmptySpace max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="TxtfProducto" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+                      <Component id="jTextField1" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                       <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="BtnBuscarProducto" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
@@ -133,9 +133,12 @@
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JTextField" name="TxtfProducto">
+        <Component class="javax.swing.JTextField" name="jTextField1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Empanada"/>
+          </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="TxtfProductoActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField1ActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel1">
@@ -175,23 +178,26 @@
 
           <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
           <SubComponents>
-            <Component class="javax.swing.JTable" name="TablaPuntosVentaProducto">
+            <Component class="javax.swing.JTable" name="TablaPuntosVenta">
               <Properties>
                 <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-                  <Table columnCount="3" rowCount="3">
+                  <Table columnCount="3" rowCount="4">
                     <Column editable="true" title="Tienda" type="java.lang.Object">
-                      <Data value=""/>
-                      <Data value=""/>
+                      <Data value="Abarrotes &quot;Lety&quot;"/>
+                      <Data value="Tiendita Seguro Social"/>
+                      <Data value="Miscelanea &quot;Uribe&quot;"/>
                       <Data value="null"/>
                     </Column>
                     <Column editable="true" title="Cantidad Paquetes Surtidos" type="java.lang.Object">
-                      <Data value=""/>
-                      <Data value=""/>
+                      <Data value="3"/>
+                      <Data value="5"/>
+                      <Data value="2"/>
                       <Data value="null"/>
                     </Column>
                     <Column editable="true" title="Fecha Surtido" type="java.lang.Object">
-                      <Data value=""/>
-                      <Data value=""/>
+                      <Data value="08/10/2024"/>
+                      <Data value="29/09/2024"/>
+                      <Data value="24/09/2024"/>
                       <Data value="null"/>
                     </Column>
                   </Table>
@@ -244,28 +250,36 @@
 
           <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
           <SubComponents>
-            <Component class="javax.swing.JTable" name="TablaPuntosVentaTienda">
+            <Component class="javax.swing.JTable" name="TablaPuntosVenta1">
               <Properties>
                 <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-                  <Table columnCount="4" rowCount="3">
+                  <Table columnCount="4" rowCount="5">
                     <Column editable="true" title="Producto" type="java.lang.Object">
-                      <Data value=""/>
-                      <Data value=""/>
+                      <Data value="Donas"/>
+                      <Data value="Tiendita Seguro Social"/>
+                      <Data value="Miscelanea &quot;Uribe&quot;"/>
+                      <Data value="null"/>
                       <Data value="null"/>
                     </Column>
-                    <Column editable="true" title="Cantidad Paquetes Surtido" type="java.lang.Object">
-                      <Data value=""/>
-                      <Data value=""/>
+                    <Column editable="true" title="Cantidad Producto Surtido" type="java.lang.Object">
+                      <Data value="3"/>
+                      <Data value="5"/>
+                      <Data value="2"/>
+                      <Data value="null"/>
                       <Data value="null"/>
                     </Column>
                     <Column editable="true" title="Fecha Surtido" type="java.lang.Object">
-                      <Data value=""/>
-                      <Data value=""/>
+                      <Data value="08/10/2024"/>
+                      <Data value="29/09/2024"/>
+                      <Data value="24/09/2024"/>
+                      <Data value="null"/>
                       <Data value="null"/>
                     </Column>
                     <Column editable="true" title="Empleado Responsable" type="java.lang.Object">
-                      <Data value=""/>
-                      <Data value=""/>
+                      <Data value="Jos&#xe9; Gonz&#xe1;lez"/>
+                      <Data value="Ram&#xf3;n P&#xe9;rez"/>
+                      <Data value="Daniel Castro"/>
+                      <Data value="null"/>
                       <Data value="null"/>
                     </Column>
                   </Table>
@@ -309,17 +323,20 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BtnMapaPuntosVenta1ActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="BtnBuscarTienda">
+        <Component class="javax.swing.JButton" name="BtnBuscarProducto1">
           <Properties>
             <Property name="text" type="java.lang.String" value="Buscar"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BtnBuscarTiendaActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BtnBuscarProducto1ActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JTextField" name="TxtfTienda">
+        <Component class="javax.swing.JTextField" name="jTextField2">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Abarrotes &quot;Lety&quot;"/>
+          </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="TxtfTiendaActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField2ActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel4">
@@ -330,7 +347,7 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="0" green="ff" red="ff" type="rgb"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Tienda:"/>
+            <Property name="text" type="java.lang.String" value="Tienda"/>
           </Properties>
         </Component>
       </SubComponents>
