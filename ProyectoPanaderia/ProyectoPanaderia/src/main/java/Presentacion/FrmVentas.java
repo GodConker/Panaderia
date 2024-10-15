@@ -1,4 +1,4 @@
-package Presentacion;
+package presentacion;
 
 import javax.swing.JOptionPane;
 
