@@ -28,29 +28,28 @@ public class FrmPuntosVenta extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jTextField1 = new javax.swing.JTextField();
+        TxtfProducto = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         BtnBuscarProducto = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        TablaPuntosVenta = new javax.swing.JTable();
+        TablaPuntosVentaProducto = new javax.swing.JTable();
         jLabel3 = new javax.swing.JLabel();
         BtnRegresar = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
-        TablaPuntosVenta1 = new javax.swing.JTable();
+        TablaPuntosVentaTienda = new javax.swing.JTable();
         BtnMapaPuntosVenta1 = new javax.swing.JButton();
-        BtnBuscarProducto1 = new javax.swing.JButton();
-        jTextField2 = new javax.swing.JTextField();
+        BtnBuscarTienda = new javax.swing.JButton();
+        TxtfTienda = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(102, 51, 0));
 
-        jTextField1.setText("Empanada");
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        TxtfProducto.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                TxtfProductoActionPerformed(evt);
             }
         });
 
@@ -69,18 +68,17 @@ public class FrmPuntosVenta extends javax.swing.JFrame {
             }
         });
 
-        TablaPuntosVenta.setModel(new javax.swing.table.DefaultTableModel(
+        TablaPuntosVentaProducto.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {"Abarrotes \"Lety\"", "3", "08/10/2024"},
-                {"Tiendita Seguro Social", "5", "29/09/2024"},
-                {"Miscelanea \"Uribe\"", "2", "24/09/2024"},
+                {"", "", ""},
+                {"", "", ""},
                 {null, null, null}
             },
             new String [] {
                 "Tienda", "Cantidad Paquetes Surtidos", "Fecha Surtido"
             }
         ));
-        jScrollPane1.setViewportView(TablaPuntosVenta);
+        jScrollPane1.setViewportView(TablaPuntosVentaProducto);
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/image11.png"))); // NOI18N
 
@@ -91,19 +89,17 @@ public class FrmPuntosVenta extends javax.swing.JFrame {
             }
         });
 
-        TablaPuntosVenta1.setModel(new javax.swing.table.DefaultTableModel(
+        TablaPuntosVentaTienda.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {"Donas", "3", "08/10/2024", "José González"},
-                {"Tiendita Seguro Social", "5", "29/09/2024", "Ramón Pérez"},
-                {"Miscelanea \"Uribe\"", "2", "24/09/2024", "Daniel Castro"},
-                {null, null, null, null},
+                {"", "", "", ""},
+                {"", "", "", ""},
                 {null, null, null, null}
             },
             new String [] {
-                "Producto", "Cantidad Producto Surtido", "Fecha Surtido", "Empleado Responsable"
+                "Producto", "Cantidad Paquetes Surtido", "Fecha Surtido", "Empleado Responsable"
             }
         ));
-        jScrollPane2.setViewportView(TablaPuntosVenta1);
+        jScrollPane2.setViewportView(TablaPuntosVentaTienda);
 
         BtnMapaPuntosVenta1.setText("Ver Puntos en Mapa");
         BtnMapaPuntosVenta1.addActionListener(new java.awt.event.ActionListener() {
@@ -112,23 +108,22 @@ public class FrmPuntosVenta extends javax.swing.JFrame {
             }
         });
 
-        BtnBuscarProducto1.setText("Buscar");
-        BtnBuscarProducto1.addActionListener(new java.awt.event.ActionListener() {
+        BtnBuscarTienda.setText("Buscar");
+        BtnBuscarTienda.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BtnBuscarProducto1ActionPerformed(evt);
+                BtnBuscarTiendaActionPerformed(evt);
             }
         });
 
-        jTextField2.setText("Abarrotes \"Lety\"");
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+        TxtfTienda.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
+                TxtfTiendaActionPerformed(evt);
             }
         });
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 0));
-        jLabel4.setText("Tienda");
+        jLabel4.setText("Tienda:");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -162,7 +157,7 @@ public class FrmPuntosVenta extends javax.swing.JFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel2)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(TxtfProducto, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(BtnBuscarProducto)
                         .addGap(76, 76, 76))))
@@ -170,9 +165,9 @@ public class FrmPuntosVenta extends javax.swing.JFrame {
                 .addGap(21, 21, 21)
                 .addComponent(jLabel4)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(TxtfTienda, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(BtnBuscarProducto1)
+                .addComponent(BtnBuscarTienda)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(BtnMapaPuntosVenta1)
                 .addGap(0, 0, Short.MAX_VALUE))
@@ -186,15 +181,15 @@ public class FrmPuntosVenta extends javax.swing.JFrame {
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(TxtfTienda, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel4)
-                    .addComponent(BtnBuscarProducto1)
+                    .addComponent(BtnBuscarTienda)
                     .addComponent(BtnMapaPuntosVenta1))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(TxtfProducto, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel2)
                     .addComponent(BtnBuscarProducto))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -218,9 +213,9 @@ public class FrmPuntosVenta extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void TxtfProductoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TxtfProductoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_TxtfProductoActionPerformed
 
     private void BtnBuscarProductoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnBuscarProductoActionPerformed
         // TODO add your handling code here:
@@ -238,13 +233,13 @@ public class FrmPuntosVenta extends javax.swing.JFrame {
     // this.setVisible(false); // Alternativa: oculta la ventana sin cerrarla
     }//GEN-LAST:event_BtnRegresarActionPerformed
 
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+    private void TxtfTiendaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TxtfTiendaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
+    }//GEN-LAST:event_TxtfTiendaActionPerformed
 
-    private void BtnBuscarProducto1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnBuscarProducto1ActionPerformed
+    private void BtnBuscarTiendaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnBuscarTiendaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_BtnBuscarProducto1ActionPerformed
+    }//GEN-LAST:event_BtnBuscarTiendaActionPerformed
 
     private void BtnMapaPuntosVenta1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnMapaPuntosVenta1ActionPerformed
         // TODO add your handling code here:
@@ -288,11 +283,13 @@ public class FrmPuntosVenta extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BtnBuscarProducto;
-    private javax.swing.JButton BtnBuscarProducto1;
+    private javax.swing.JButton BtnBuscarTienda;
     private javax.swing.JButton BtnMapaPuntosVenta1;
     private javax.swing.JButton BtnRegresar;
-    private javax.swing.JTable TablaPuntosVenta;
-    private javax.swing.JTable TablaPuntosVenta1;
+    private javax.swing.JTable TablaPuntosVentaProducto;
+    private javax.swing.JTable TablaPuntosVentaTienda;
+    private javax.swing.JTextField TxtfProducto;
+    private javax.swing.JTextField TxtfTienda;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -300,7 +297,5 @@ public class FrmPuntosVenta extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
     // End of variables declaration//GEN-END:variables
 }

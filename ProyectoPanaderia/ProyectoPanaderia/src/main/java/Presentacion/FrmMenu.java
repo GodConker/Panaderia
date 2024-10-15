@@ -28,11 +28,11 @@ public class FrmMenu extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
-        BtnGestionInventario = new javax.swing.JButton();
+        BtnInventario = new javax.swing.JButton();
         BtnPuntosVenta = new javax.swing.JButton();
-        BtnRegistroPedido = new javax.swing.JButton();
+        BtnVentas = new javax.swing.JButton();
         BtnReporteVentas = new javax.swing.JButton();
-        BtnGestionPersonal = new javax.swing.JButton();
+        BtnRecursosHumanos = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
 
@@ -42,15 +42,15 @@ public class FrmMenu extends javax.swing.JFrame {
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/image11.png"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 40, 160, 70));
 
-        BtnGestionInventario.setBackground(new java.awt.Color(255, 204, 0));
-        BtnGestionInventario.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        BtnGestionInventario.setText("Gestión de Inventario ");
-        BtnGestionInventario.addActionListener(new java.awt.event.ActionListener() {
+        BtnInventario.setBackground(new java.awt.Color(255, 204, 0));
+        BtnInventario.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        BtnInventario.setText("Inventario");
+        BtnInventario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BtnGestionInventarioActionPerformed(evt);
+                BtnInventarioActionPerformed(evt);
             }
         });
-        getContentPane().add(BtnGestionInventario, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 340, 150, 30));
+        getContentPane().add(BtnInventario, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 300, 150, 30));
 
         BtnPuntosVenta.setBackground(new java.awt.Color(255, 204, 0));
         BtnPuntosVenta.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
@@ -60,17 +60,17 @@ public class FrmMenu extends javax.swing.JFrame {
                 BtnPuntosVentaActionPerformed(evt);
             }
         });
-        getContentPane().add(BtnPuntosVenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 220, 150, 30));
+        getContentPane().add(BtnPuntosVenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 260, 150, 30));
 
-        BtnRegistroPedido.setBackground(new java.awt.Color(255, 204, 0));
-        BtnRegistroPedido.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        BtnRegistroPedido.setText("Registro de Pedido");
-        BtnRegistroPedido.addActionListener(new java.awt.event.ActionListener() {
+        BtnVentas.setBackground(new java.awt.Color(255, 204, 0));
+        BtnVentas.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        BtnVentas.setText("Ventas");
+        BtnVentas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BtnRegistroPedidoActionPerformed(evt);
+                BtnVentasActionPerformed(evt);
             }
         });
-        getContentPane().add(BtnRegistroPedido, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 180, 150, 30));
+        getContentPane().add(BtnVentas, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 180, 150, 30));
 
         BtnReporteVentas.setBackground(new java.awt.Color(255, 204, 0));
         BtnReporteVentas.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
@@ -80,17 +80,17 @@ public class FrmMenu extends javax.swing.JFrame {
                 BtnReporteVentasActionPerformed(evt);
             }
         });
-        getContentPane().add(BtnReporteVentas, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 260, 150, 30));
+        getContentPane().add(BtnReporteVentas, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 220, 150, 30));
 
-        BtnGestionPersonal.setBackground(new java.awt.Color(255, 204, 0));
-        BtnGestionPersonal.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        BtnGestionPersonal.setText("Gestión de Personal");
-        BtnGestionPersonal.addActionListener(new java.awt.event.ActionListener() {
+        BtnRecursosHumanos.setBackground(new java.awt.Color(255, 204, 0));
+        BtnRecursosHumanos.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        BtnRecursosHumanos.setText("Recursos Humanos");
+        BtnRecursosHumanos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BtnGestionPersonalActionPerformed(evt);
+                BtnRecursosHumanosActionPerformed(evt);
             }
         });
-        getContentPane().add(BtnGestionPersonal, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 300, 150, 30));
+        getContentPane().add(BtnRecursosHumanos, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 340, 150, 30));
 
         jLabel3.setBackground(new java.awt.Color(0, 0, 0));
         jLabel3.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
@@ -104,9 +104,17 @@ public class FrmMenu extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void BtnGestionInventarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnGestionInventarioActionPerformed
+    private void BtnInventarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnInventarioActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_BtnGestionInventarioActionPerformed
+        // Crear una instancia del formulario de Gestión de Inventario
+    FrmInventario gestionInventario = new FrmInventario();
+    
+    // Mostrar el formulario de Gestión de Inventario
+    gestionInventario.setVisible(true);
+    
+    // Opcional: Cerrar o esconder la ventana actual
+    this.dispose(); // Esto cierra la ventana actual (opcional)
+    }//GEN-LAST:event_BtnInventarioActionPerformed
 
     private void BtnPuntosVentaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnPuntosVentaActionPerformed
     // Crear una nueva instancia de FrmPuntosVenta
@@ -120,9 +128,9 @@ public class FrmMenu extends javax.swing.JFrame {
     this.setVisible(false); // Solo oculta el FrmMenu
     }//GEN-LAST:event_BtnPuntosVentaActionPerformed
 
-    private void BtnRegistroPedidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnRegistroPedidoActionPerformed
+    private void BtnVentasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnVentasActionPerformed
     // Crear una nueva instancia de FrmPuntosVenta
-    FrmRegistroPedido registroPedido = new FrmRegistroPedido();
+    FrmVentas registroPedido = new FrmVentas();
     
     // Hacer visible la ventana FrmPuntosVenta
     registroPedido.setVisible(true);
@@ -130,15 +138,31 @@ public class FrmMenu extends javax.swing.JFrame {
    
     this.dispose(); // Cierra el FrmMenu
     this.setVisible(false); // Solo oculta el FrmMenu
-    }//GEN-LAST:event_BtnRegistroPedidoActionPerformed
+    }//GEN-LAST:event_BtnVentasActionPerformed
 
     private void BtnReporteVentasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnReporteVentasActionPerformed
         // TODO add your handling code here:
+        // Crear una instancia del formulario de Reporte de Ventas
+    FrmReporteVentas reporteVentas = new FrmReporteVentas();
+    
+    // Mostrar el formulario de Reporte de Ventas
+    reporteVentas.setVisible(true);
+    
+    // Opcional: Cerrar o esconder la ventana actual
+    this.dispose(); // Esto cierra la ventana actual (opcional)
     }//GEN-LAST:event_BtnReporteVentasActionPerformed
 
-    private void BtnGestionPersonalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnGestionPersonalActionPerformed
+    private void BtnRecursosHumanosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnRecursosHumanosActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_BtnGestionPersonalActionPerformed
+        // Crear una instancia del formulario de Recursos Humanos
+    FrmRecursosHumanos recursosHumanos = new FrmRecursosHumanos();
+    
+    // Mostrar el formulario de Recursos Humanos
+    recursosHumanos.setVisible(true);
+    
+    // Opcional: Cerrar o esconder la ventana actual
+    this.dispose(); // Esto cierra la ventana actual (opcional)
+    }//GEN-LAST:event_BtnRecursosHumanosActionPerformed
 
     /**
      * @param args the command line arguments
@@ -176,11 +200,11 @@ public class FrmMenu extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton BtnGestionInventario;
-    private javax.swing.JButton BtnGestionPersonal;
+    private javax.swing.JButton BtnInventario;
     private javax.swing.JButton BtnPuntosVenta;
-    private javax.swing.JButton BtnRegistroPedido;
+    private javax.swing.JButton BtnRecursosHumanos;
     private javax.swing.JButton BtnReporteVentas;
+    private javax.swing.JButton BtnVentas;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
